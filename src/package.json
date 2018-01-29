@@ -1,0 +1,15 @@
+{
+    "name": "brisk-runtime-nodejs",
+    "version": "0.0.1",
+    "description": "A Node.js runtime for OpenBrisk.",
+    "author": "info@openbrisk.org",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/openbrisk/brisk-runtime-nodejs/issues"
+    },
+    "homepage": "https://github.com/openbrisk/brisk-runtime-nodejs#readme",
+    "dependencies": {
+        "express": "^4.15.3",
+        "morgan": "^1.8.2"
+    }
+}
