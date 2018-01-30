@@ -1,7 +1,7 @@
 module.exports = {
-    execute: function(request, response) {
-      return {
-          text: "Hello World!"
-      };
-    }
+	execute: function(context) {
+		return {
+			text: "Hello World!"
+		};
+	}
 };
