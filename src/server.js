@@ -39,6 +39,7 @@ const invokeFunction = (request, response) => {
 	const briskContext = {
 		data: request.body || {}
 	};
+
 	// Make sure that the function returns a promise.
 	let funcPromise = Promise.resolve(func(briskContext));
 
