@@ -1,7 +1,12 @@
 .PHONY: build
 
 build: 
-	npm install ./src/
+	docker build -t openbrisk/brisk-runtime-nodejs .
 
 run:
-	NODE_ENV=development MODULE_NAME=hello FUNCTION_HANDLER=execute node ./src/server.js
+	docker run -it \
+	-p 8080:8080 \
+	-e NODE_ENV=development \
+	-e MODULE_NAME=hello_world \
+	-e FUNCTION_HANDLER=execute \
+	openbrisk/brisk-runtime-nodejs
