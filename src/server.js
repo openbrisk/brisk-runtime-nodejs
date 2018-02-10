@@ -74,7 +74,7 @@ const timeoutPromise = function(seconds, promise) {
 	let timeout = new Promise((resolve, reject) => {
 		let id = setTimeout(() => {
 			clearTimeout(id);
-			reject(`Function timed out after ${seconds / 1000} seconds`)
+			reject(`Function timed out after ${seconds / 1000} seconds`);
 		}, seconds * 1000);
 	});
 
@@ -88,7 +88,7 @@ const timeoutPromise = function(seconds, promise) {
 /**
  * Invoke the function with and without parameters.
  */
-app.get("/runtime/v1/", invokeFunction);
-app.post("/runtime/v1/", invokeFunction);
+app.get("/", invokeFunction);
+app.post("/", invokeFunction);
 
-app.listen(8080);
+app.listen(8080, console.log("Listening on port 8080 ..."));
